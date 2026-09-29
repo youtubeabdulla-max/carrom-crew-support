@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Carrom Crew — Privacy Policy</h1>
-<p><em>Updated 28 September 2026 · applies to Carrom Crew 1.1.0 and later</em></p>
+<p><em>Updated 29 September 2026 · applies to Carrom Crew 1.1.0 and later</em></p>
 
 <h2 id="who-we-are">Who we are</h2>
 <p>Carrom Crew is made and published by <strong>Abdulla Alhashmi</strong>, an independent game developer ("we", "us"). We
@@ -38,8 +38,9 @@ your online data in the app at any time (see "Deleting your data").</p>
       matches.</li>
   <li>A random guest identifier (<code>g-&hellip;</code>) created on first launch. It contains no personal information.</li>
   <li>The display name you choose (defaults to "Player").</li>
-  <li>If you sign in with Apple: the sign-in provider, the e-mail address you chose to share and a session key that keeps
-      this device signed in.</li>
+  <li>If you sign in with Apple: the sign-in provider, the account id Apple gives Carrom Crew (the game uses it only to check
+      with Apple that you still use Sign in with Apple for Carrom Crew), the e-mail address you chose to share and a session
+      key that keeps this device signed in.</li>
   <li>Your answer to the "Personalised ads" question, whether you own Remove Ads, and the counters that keep ads spaced out
       (how many matches you have finished, when the last ad between matches was shown and how many reward videos you have
       watched today).</li>
@@ -52,9 +53,11 @@ data</strong> or uninstall the app.</p>
 Account &amp; name</strong>. Signing in is never required: guests can play everything. We never see or store your password.
 From the sign-in we keep: the sign-in provider (Apple), the account id Apple gives us for Carrom Crew, the e-mail address
 you choose to share (Apple lets you hide it; we then receive Apple's private relay address instead), the random guest
-identifier of the device you signed in on, which links the account to your online profile, and a session key (stored only as
-a one-way hash) that keeps that device signed in. We use these only to recognise your account. While you are signed in, the
-app uploads a copy of your game progress to our server and loads it when you sign in on another device: your display name,
+identifier of the device you signed in on, which links the account to your online profile, a session key (stored only as
+a one-way hash) that keeps that device signed in, and the token Apple gives our server for your sign-in (a "refresh token"),
+which we use only to ask Apple to revoke Carrom Crew's Sign in with Apple access when you delete your account. We use the
+rest only to recognise your account. While you are signed in, the app uploads a copy of your game progress to our server and
+loads it when you sign in on another device: your display name,
 level, XP, trophies, owned items, Crew Pass, missions, achievements, trick-shot stars, cup, Weekend League and weekly ladder
 progress, streaks and best times, and settings, your 20 most recent match results (including matches against the computer: result, opponent's name and mode, XP
 and time), your 20 latest inbox messages, the random guest identifier, your ad choice, whether you own Remove Ads, and the ad
@@ -64,9 +67,14 @@ player id to the ad partners.</p>
 <h2 id="deleting">Deleting your data</h2>
 <ul>
   <li><strong>Signed in with Apple:</strong> use <strong>Settings &rarr; Account &amp; name &rarr; Delete account</strong> at
-      any time. This immediately removes from our server the sign-in link, your cloud save, your e-mail address, your online
-      profile, rating, friends, blocks, ranked match results and leaderboard entries. Delete account does not remove Carrom
-      Crew from your Apple Account by itself: to do that too, open the iPhone or iPad <strong>Settings</strong> app, tap your
+      any time; the game asks you to confirm once with Apple. This immediately removes from our server the sign-in link, your
+      cloud save, your e-mail address, your online profile, rating, friends, blocks, ranked match results and leaderboard
+      entries. Our server also asks Apple to revoke Carrom Crew's Sign in with Apple access, which removes Carrom Crew from
+      your Apple Account, and deletes the Apple refresh token with your account. If Apple can't complete that right away, our
+      server keeps that token for this one purpose and tries again for up to 7 days, together with a one-way scrambled form
+      (a keyed hash) of your Apple user id, so that the retry is dropped if you sign in with the same Apple ID again. If
+      Carrom Crew still appears in your
+      Apple Account afterwards, you can remove it yourself: open the iPhone or iPad <strong>Settings</strong> app, tap your
       name, then <strong>Sign-In &amp; Security &rarr; Sign in with Apple</strong>, choose Carrom Crew and stop using Sign in
       with Apple for it.</li>
   <li><strong>Playing as a guest:</strong> use <strong>Settings &rarr; Privacy &amp; data &rarr; Delete online data</strong>
@@ -224,7 +232,10 @@ purchases</strong>.</p>
   <li><strong>On your device:</strong> until you use Reset all data or uninstall the app.</li>
   <li><strong>Online profile</strong> (name, character, friend code, rating, star totals, friends, blocks and ranked match
       results): for as long as the profile exists, until it is deleted as described in "Deleting your data".</li>
-  <li><strong>Sign in with Apple link, e-mail address and cloud save:</strong> until you use Delete account.</li>
+  <li><strong>Sign in with Apple link, e-mail address, Apple refresh token and cloud save:</strong> until you use Delete
+      account. If Apple can't complete the revocation right away, the refresh token and a keyed hash of your Apple user id
+      are kept only to ask Apple again (and to cancel that retry if you sign in with the same Apple ID again), for up to
+      7 days.</li>
   <li><strong>Moves of an online match:</strong> only in the server's memory while the match is running.</li>
   <li><strong>Server logs:</strong> the game server's running log notes events such as a room opening, a match starting and
       ending (with the players' display names) and reports, with pseudonymous player ids and without IP addresses. It is used
