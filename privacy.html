@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Carrom Crew — Privacy Policy</h1>
-<p><em>Updated 2 October 2026 · applies to Carrom Crew 1.1.0 and later</em></p>
+<p><em>Updated 11 October 2026 · applies to Carrom Crew 1.0.0 and later</em></p>
 
 <h2 id="who-we-are">Who we are</h2>
 <p>Carrom Crew is made and published by <strong>Abdulla Alhashmi</strong>, an independent game developer ("we", "us"). We
@@ -23,13 +23,14 @@ hold about you, or to have it corrected or deleted.</p>
 <h2>Summary</h2>
 <p>We do not sell your data for money, and the game has no analytics of its own. Carrom Crew shows ads delivered through
 <strong>Unity LevelPlay</strong>, which fills them from our ad partners <strong>Unity Ads</strong> and <strong>Google
-AdMob</strong>. These partners process some device data, such as your advertising identifier, to show and measure ads. They
-are asked to personalise ads only if you allow it (and, on iPhone and iPad, only if you also allow tracking). See "Advertising"
-and "Your ad choices". Your game progress is stored on your device. While the game is online it keeps a small online profile
-on our server for friends, leaderboards and online play, which includes your trick-shot star totals (see "Friends and
-leaderboards" and "Online matches"). Sign in with Apple is optional on iPhone and iPad; if you use it, a copy of your progress
-is kept on our server so it loads on your other devices (see "Optional Sign in with Apple and cloud save"). You can delete
-your online data in the app at any time (see "Deleting your data").</p>
+AdMob</strong>. These partners process some device data, such as your advertising identifier, to show and measure ads. They are
+asked to personalise ads only if you allow it (and, on iPhone and iPad, only if you also allow tracking). See "Advertising" and
+"Your ad choices". Your game progress is stored on your device. While the game is online it keeps a small online profile on our
+server for friends, leaderboards and online play, which includes your trick-shot star totals and the optional gender and flag
+shown next to your name (see "Friends and leaderboards", "Gender and flag (optional)" and "Online matches"). Sign in with Apple
+is optional on iPhone and iPad; if you use it, a copy of your progress is kept on our server so it loads on your other devices
+(see "Optional Sign in with Apple and cloud save"). You can delete your online data in the app at any time (see "Deleting your
+data").</p>
 
 <h2>What the app stores on your device</h2>
 <ul>
@@ -38,9 +39,13 @@ your online data in the app at any time (see "Deleting your data").</p>
       matches.</li>
   <li>A random guest identifier (<code>g-&hellip;</code>) created on first launch. It contains no personal information.</li>
   <li>The display name you choose (defaults to "Player").</li>
+  <li>Your gender setting (Male, Female or Hidden) and your flag setting (a country or region, or No flag).</li>
   <li>If you sign in with Apple: the sign-in provider, the account id Apple gives Carrom Crew (the game uses it only to check
       with Apple that you still use Sign in with Apple for Carrom Crew), the e-mail address you chose to share and a session
-      key that keeps this device signed in.</li>
+      key that keeps this device signed in. The current version of the app also keeps, to show them in <strong>Settings
+      &rarr; Account &amp; name</strong>, the date your account was created, the time of its last cloud save and your Player
+      ID, and an account key (a random-looking code, not your account id) so it knows which account this device's progress
+      belongs to; the account key stays after you sign out and is removed by Reset all data.</li>
   <li>Your answer to the "Personalised ads" question, whether you own Remove Ads, and the counters that pace the ads (how many
       matches you have finished, when the last ad between matches was shown and how many reward videos you have watched
       today).</li>
@@ -56,34 +61,58 @@ you choose to share (Apple lets you hide it; we then receive Apple's private rel
 identifier of the device you signed in on, which links the account to your online profile, a session key (stored only as
 a one-way hash) that keeps that device signed in, and the token Apple gives our server for your sign-in (a "refresh token"),
 which we use only to ask Apple to revoke Carrom Crew's Sign in with Apple access when you delete your account. We use the
-rest only to recognise your account. While you are signed in, the app uploads a copy of your game progress to our server and
-loads it when you sign in on another device: your display name,
-level, XP, trophies, owned items, Crew Pass, missions, achievements, trick-shot stars, cup, Weekend League and weekly ladder
-progress, streaks and best times, and settings, your 20 most recent match results (including matches against the computer: result, opponent's name and mode, XP
-and time), your 20 latest inbox messages, the random guest identifier, your ad choice, whether you own Remove Ads, and the ad
-counters. Signing out keeps your progress on the device and stops syncing. We never pass your account, e-mail address or
-player id to the ad partners.</p>
+account id to recognise your account. We use the e-mail address only to show you which account you signed in with and to
+confirm it is you if you write to us; we never send you marketing e-mail. The session key and the refresh token are used only
+as described above.</p>
+<p>In the current version of the app, when you sign in, the app first shows you whether an account already exists for that
+sign-in. Until you tap Create account (or choose which progress to keep), our server holds the sign-in result (the account
+id, the e-mail address and, for Apple, a one-time code or the token it was exchanged for) only in its memory, for up to 10
+minutes, and creates nothing; if you tap Not now it is dropped, and for a new account the token is revoked, which removes
+Carrom Crew from your Apple Account again. Older versions of the app create or open the account in one step. We also keep
+when your account was created and when its cloud save was last updated; the current version of the app shows both in
+<strong>Settings &rarr; Account &amp; name</strong>.</p>
+<p>If you use the current version of the app to sign in on a device to an account that already exists, that device's previous
+guest profile is merged into your account: its friends, friend requests and blocks move to your account's profile, and the
+rest of it (name, character, gender, flag, friend code, rating and results) is deleted from our server. The app shows you
+this before you confirm.</p>
+<p>While you are signed in, the app uploads a copy of your game progress to our server and
+loads it when you sign in on another device: your display name, gender and flag settings,
+level, XP, trophies, owned items and characters, Crew Pass, Remove Ads, missions, achievements, trick-shot stars, cup, Weekend
+League and weekly ladder progress, streaks and best times, your 20 most recent match results (including matches against the computer: result, opponent's name and mode, XP
+and time), your 20 latest inbox messages and the ad counters. Older versions of the app upload the same and also your settings,
+the random guest identifier and your ad choice. Items and purchases already in your cloud save stay in it, even if an older
+version of the game uploads a copy without them. Signing out keeps your progress on the device and stops syncing; the current
+version of the app first sends a last copy of your progress. Only one device at a time stays signed in to an account. We never
+pass your account, e-mail address or player id to the ad partners.</p>
 
 <h2 id="deleting">Deleting your data</h2>
 <ul>
   <li><strong>Signed in with Apple:</strong> use <strong>Settings &rarr; Account &amp; name &rarr; Delete account</strong> at
       any time; the game asks you to confirm once with Apple. This immediately removes from our server the sign-in link, your
-      cloud save, your e-mail address, your online profile, rating, friends, blocks, ranked match results and leaderboard
-      entries. Our server also asks Apple to revoke Carrom Crew's Sign in with Apple access, which removes Carrom Crew from
-      your Apple Account, and deletes the Apple refresh token with your account. If Apple can't complete that right away, our
-      server keeps that token for this one purpose and tries again for up to 7 days, together with a one-way scrambled form
-      (a keyed hash) of your Apple user id, so that the retry is dropped if you sign in with the same Apple ID again. If
-      Carrom Crew still appears in your
-      Apple Account afterwards, you can remove it yourself: open the iPhone or iPad <strong>Settings</strong> app, tap your
-      name, then <strong>Sign-In &amp; Security &rarr; Sign in with Apple</strong>, choose Carrom Crew and stop using Sign in
-      with Apple for it.</li>
-  <li><strong>Playing as a guest:</strong> use <strong>Settings &rarr; Privacy &amp; data &rarr; Delete online data</strong>
-      at any time. This immediately removes from our server your online profile (display name, character, friend code,
-      rating and trick-shot star totals), your friends and friend requests, blocks, ranked match results and leaderboard
-      entries. Your progress on the device stays. The game then stays offline until you go online on purpose (by opening
-      Friends or Leaderboards, playing online or signing in), which starts a new profile with a new friend code. You can also
-      e-mail <a href="mailto:youtubeabdulla@gmail.com">youtubeabdulla@gmail.com</a> with the friend code shown on the Friends
-      screen, and we delete the same data within one month (usually much sooner) and confirm by e-mail.</li>
+      cloud save, your e-mail address, your online profile (including your gender and flag), rating, friends and friend
+      requests (declined ones too), blocks, ranked match results and leaderboard entries. Our server also asks Apple to
+      revoke Carrom Crew's Sign in with Apple access, which removes Carrom Crew from your Apple Account, and deletes the
+      Apple refresh token with your account. If Apple can't
+      complete that right away, our server keeps that token for this one purpose and tries again for up to 7 days, together
+      with a one-way scrambled form (a keyed hash) of your Apple user id, so that the retry is dropped if you sign in with the
+      same Apple ID again. If Carrom Crew still appears in your Apple Account afterwards, you can remove it yourself: open the
+      iPhone or iPad <strong>Settings</strong> app, tap your name, then <strong>Sign-In &amp; Security &rarr; Sign in with
+      Apple</strong>, choose Carrom Crew and stop using Sign in with Apple for it. After the deletion the current version of
+      the app keeps your progress on the device as a guest and stays offline until you open Friends or Leaderboards or play
+      online; nothing is sent to our server before that. Older versions of the app go online again at once as a new guest,
+      which starts a new online profile.</li>
+  <li><strong>Playing as a guest:</strong> use <strong>Settings &rarr; Privacy &amp; data &rarr; Delete online data</strong> at
+      any time. This immediately removes from our server your online profile (display name, character, gender, flag, friend
+      code, rating and trick-shot star totals), your friends and friend requests (declined ones too), blocks, ranked match
+      results and leaderboard entries. Your progress on the device stays. The game then stays offline until you go online on
+      purpose (by opening Friends or Leaderboards, playing online or signing in), which starts a new profile with a new
+      friend code.</li>
+  <li><strong>By e-mail:</strong> You can also e-mail <a href="mailto:youtubeabdulla@gmail.com">youtubeabdulla@gmail.com</a>
+      with the friend code shown on the Friends screen (the current version of the app also shows it as your Player ID in
+      <strong>Settings &rarr; Account &amp; name</strong>). So that nobody can delete someone else's data, we first confirm it
+      is you: for an account, write from the e-mail address shown in <strong>Settings &rarr; Account &amp; name</strong>. If
+      Apple hid your address there or none is shown, or for a guest profile, we instead ask you to change your in-game name to
+      a word we send you. We then delete the same data within one month (usually much sooner) and confirm by e-mail.</li>
   <li><strong>On your device:</strong> <strong>Settings &rarr; Privacy &amp; data &rarr; Reset all data</strong>, or uninstall
       the app.</li>
 </ul>
@@ -99,25 +128,54 @@ described in "Advertising". Ads are never shown during a match or during the les
 
 <h2>Online matches</h2>
 <p>If you play online (a quick or ranked match, or a room with a friend), the app connects to the Carrom Crew match server to
-pair you with another player. During the match the server receives your display name, your chosen character, a temporary
-session token and your moves (striker position, aim and the resulting board), and relays them to your opponent, who sees
-your display name and character. Your moves are kept in memory only while the match is running and are not stored. The
-result of a ranked match (winner, loser, how the match ended, rating change and time) is stored with your online profile so
-ratings and leaderboards work; quick matches and friend rooms are not recorded. The server does not store your IP address
-beyond the open connection. There is no chat &mdash; only the built-in emote stickers can be sent.</p>
+pair you with another player. During the match the server receives your display name, your chosen character, your gender and
+flag (unless set to Hidden or No flag), a temporary session token and your moves (striker position, aim and the resulting
+board), and relays them to your opponent, who sees your display name, character, gender icon and flag. Your opponent's game
+also receives the disc set you play with and, once the game has linked the match to your online profile, your pseudonymous
+player id (see "Friends and leaderboards"), so that your opponent can send you a friend request for 24 hours after the match.
+Your moves are kept in memory only while the match is running and are not stored. The result of a ranked match (winner, loser,
+how the match ended, rating change and time) is stored with your online profile so ratings and leaderboards work; the results
+of quick matches and friend rooms are not stored. For every online match (quick, ranked or a friend room) the server keeps the
+pair of the two players' ids in its memory for 24 hours, not stored, only so that the two players can send each other a friend
+request. The server does not store your IP address beyond the open connection. There is no chat &mdash; only the built-in emote
+stickers and fixed phrases can be sent.</p>
 
 <h2>Friends and leaderboards</h2>
 <p>A few seconds after you finish the first-launch screens, and whenever the game runs with an internet connection, it connects
 to the Carrom Crew server by itself, even if you never play online (after you use Delete online data it waits until you go
-online on purpose; see "Deleting your data"). The server then keeps an online profile for your device:
-a pseudonymous player id (a keyed hash of the random guest id created on your device &mdash; not a device identifier, your
-name or your e-mail), your display name, your chosen character, your friend code, when the profile was created and last
-seen, your rating and online wins and losses, your trick-shot star totals (all-time and this week, which the game sends by
-itself whenever it connects, after each match and when you open the leaderboards) and your friends list. Other players can see your display name, character, rating and
-star totals on the leaderboards, including the public Trick shots and This week boards, and your friends can see whether you are online.
-Friend invites carry your name and a private room code; they are held only in the server's memory, not stored, and disappear
-from your friend's screen after a minute. The rating of online matches is worked out by the server from the match result. To
-have this profile deleted, see "Deleting your data".</p>
+online on purpose; see "Deleting your data"). The server then keeps an online profile for your device: a pseudonymous player id
+(a keyed hash of the random guest id created on your device &mdash; not a device identifier, your name or your e-mail), your
+display name, your chosen character, your gender and flag (see "Gender and flag (optional)"), your friend code, when the
+profile was created and last seen, your rating and online wins and losses, your trick-shot star totals (all-time and this week,
+which the game sends by itself whenever it connects, after each match and when you open the leaderboards) and your friends
+list. Other players can see your display name, character, gender icon, flag, rating and star totals on the leaderboards,
+including the public Trick shots and This week boards, and your friends can see whether you are online. Other players can send
+you a friend request with your friend code, from your row while you are on a leaderboard, or for 24 hours after an online match
+with you; you choose whether to accept it. If you decline a request, the server keeps the pair of player ids for 7 days so that
+the same player can't ask again right away. Friend invites carry
+your name, gender icon, flag and a private room code; they are held only in the server's memory, not stored, and disappear from
+your friend's screen after a minute. The rating of online matches is worked out by the server from the match result. To have
+this profile deleted, see "Deleting your data".</p>
+
+<h2 id="gender-flag">Gender and flag (optional)</h2>
+<p>You can show a small gender icon and a flag next to your display name. Both are optional, and you can change or remove
+them at any time in <strong>Settings &rarr; Account &amp; name</strong>.</p>
+<ul>
+  <li><strong>Gender:</strong> Male, Female or Hidden. It starts as <strong>Hidden</strong>, which shows nothing. Male shows
+      a blue icon with the male sign and Female a pink icon with the female sign.</li>
+  <li><strong>Flag:</strong> the flag of a country or region from the international ISO 3166-1 list, or <strong>No
+      flag</strong>. Until you choose, your flag is the one for the region set on your device (in its language and region
+      settings), if that region is on the list; otherwise no flag is shown. The game does not use GPS, location services or
+      your IP address for this, and never asks for location permission. You may choose any flag on the list; it does not have
+      to show where you are. Country and region names come from the Unicode CLDR standard data, and flags are shown as players
+      choose them; they are not a statement by us about any country, territory or border.</li>
+</ul>
+<p>Your gender and flag are stored on our server with your online profile and shown to other players next to your name: in
+online matches and on their result screens, on the leaderboards, in friends lists and in friend invites. We use them only for
+that. We do not guess your gender or country from anything else (such as your name, character, IP address or the ads you
+see), we do not use them for ads or analytics, and we never pass them to the ad partners. When you choose Hidden or No flag,
+our server keeps no gender or flag for you. Deleting your online profile or your account deletes them (see "Deleting your
+data"). Computer opponents show their character's gender icon but never a flag.</p>
 
 <h2>Reporting and blocking</h2>
 <p>You can report another player's name or behaviour and block players from the Leaderboards, Friends and online result
@@ -161,6 +219,17 @@ Ads)</a>, <a href="https://policies.google.com/privacy">Google</a> and
 services</a>.</p>
 <p>Ads need an internet connection. If an ad cannot be loaded, you simply keep playing. We do not choose the individual ads
 that the partners show; if you see an ad that seems inappropriate, please report it (see "Reporting an ad").</p>
+
+<h2 id="why">Why we use your data</h2>
+<ul>
+  <li><strong>To provide the game you ask for (contract):</strong> your online profile, friends, online matches and
+      leaderboards, and, if you sign in, your account and cloud save.</li>
+  <li><strong>With your consent:</strong> personalised ads (the Personalised ads switch) and the optional gender and flag you
+      choose to show. You can withdraw it at any time in the app.</li>
+  <li><strong>Our legitimate interests in keeping the game safe and working:</strong> moderating names and reports, blocking,
+      preventing abuse, server logs, and non-personalised ads that keep the game free to play.</li>
+  <li><strong>Legal obligations:</strong> answering data requests and keeping the records the law requires.</li>
+</ul>
 
 <h2 id="third-parties">Who else handles data</h2>
 <ul>
@@ -220,23 +289,31 @@ screenshot. We use a report, and the e-mail address it comes from, only to look 
 blocked through the ad partner) and to reply to you.</p>
 
 <h2>Purchases</h2>
-<p>Carrom Crew sells optional cosmetic items (strikers, boards and effects), character packs, the Everything Bundle, the
-Crew Pass and Remove Ads through the Apple App Store and Google Play billing. Purchases are processed by Apple or Google Play;
-the app only receives a confirmation that the purchase succeeded, and we never see your payment details. Purchases stay with
-your App Store or Google Play account. Each time the game starts it re-applies the items you own, such as Remove Ads, once the
-store has answered; after a reinstall or on a new device they are brought back with <strong>Settings &rarr; Restore
-purchases</strong>.</p>
+<p>Carrom Crew sells optional cosmetic items (strikers, boards and effects), character packs and bundles, Elite, Phantom and
+Zenith characters (each with its own set of items), the Crew Pass and Remove Ads through the Apple App Store and Google Play
+billing. Purchases are processed by Apple or Google Play; the app only receives a confirmation that the purchase succeeded, and
+we never see your payment details. Buying never requires an account: on iPhone and iPad a guest is asked whether to save
+the purchase to an account and can always buy without one. Purchases stay with your App Store or Google Play account, and if you
+are signed in, what you own is also kept in your account's cloud save (see "Optional Sign in with Apple and cloud save"). Each
+time the game starts it re-applies the items you own, such as Remove Ads, once the store has answered; after a reinstall or on a
+new device they are brought back with <strong>Settings &rarr; Restore purchases</strong>, which works with or without an account.
+The Everything Bundle is no longer sold; if you bought it, Restore purchases still brings back everything in it.</p>
 
 <h2 id="retention">How long data is kept</h2>
 <ul>
   <li><strong>On your device:</strong> until you use Reset all data or uninstall the app.</li>
-  <li><strong>Online profile</strong> (name, character, friend code, rating, star totals, friends, blocks and ranked match
-      results): for as long as the profile exists, until it is deleted as described in "Deleting your data".</li>
+  <li><strong>Online profile</strong> (name, character, gender, flag, friend code, rating, star totals, friends, blocks and
+      ranked match results): for as long as the profile exists, until it is deleted as described in "Deleting your data".</li>
   <li><strong>Sign in with Apple link, e-mail address, Apple refresh token and cloud save:</strong> until you use Delete
       account. If Apple can't complete the revocation right away, the refresh token and a keyed hash of your Apple user id
       are kept only to ask Apple again (and to cancel that retry if you sign in with the same Apple ID again), for up to
       7 days.</li>
+  <li><strong>A sign-in waiting for your confirmation:</strong> only in the server's memory, for up to 10 minutes.</li>
   <li><strong>Moves of an online match:</strong> only in the server's memory while the match is running.</li>
+  <li><strong>Which two players met in an online match</strong> (the pair of player ids): only in the server's memory, for 24
+      hours after the match.</li>
+  <li><strong>A friend request you declined</strong> (the pair of player ids): 7 days, or until either profile is
+      deleted.</li>
   <li><strong>Server logs:</strong> the game server's running log notes events such as a room opening, a match starting and
       ending (with the players' display names) and reports, with pseudonymous player ids and without IP addresses. It is used
       only to keep the server working and to handle reports. Fly.io keeps it only as long as its log service keeps logs; we do
@@ -250,25 +327,27 @@ purchases</strong>.</p>
 </ul>
 
 <h2 id="rights">Your rights</h2>
-<p>You can ask us at any time for a copy of the data we hold about you, to correct it, to delete it or to stop using it, and
-you can withdraw a consent you gave (for example with the Personalised ads switch) without affecting what was done before.
+<p>You can ask us at any time for a copy of the data we hold about you (also in a machine-readable format), to correct it, to
+delete it, to restrict how we use it, or to object to a use based on our legitimate interests, and you can withdraw a consent
+you gave (for example with the Personalised ads switch) without affecting what was done before.
 E-mail <a href="mailto:youtubeabdulla@gmail.com">youtubeabdulla@gmail.com</a>; for an online profile, include the friend
-code from the Friends screen so we can find it. We answer within one month. Depending on where you live, you may also
+code from the Friends screen (the Player ID in <strong>Settings &rarr; Account &amp; name</strong>) so we can find it. We answer within one month. Depending on where you live, you may also
 complain to your local data-protection authority.</p>
 
 <h2>Children</h2>
 <p>Carrom Crew's content is suitable for all ages (App Store 4+, Everyone / PEGI 3), and the game is intended for players aged
 13 and older and is not directed at children under 13. We tell the ad partners that the game is not child-directed. The game
-never asks for a real name, age, address, phone number or location, and we do not knowingly collect personal information from
-children under 13. If you believe a child has given us personal information (for example an e-mail address through Sign in
-with Apple), contact us and we will delete it.</p>
+never asks for a real name, age, address, phone number or location; the optional gender starts as Hidden, and the optional flag
+is a country or region you choose to show, not your location. We do not knowingly collect personal information from children
+under 13. If you believe a child has given us personal information (for example an e-mail address through Sign in with Apple),
+contact us and we will delete it.</p>
 
 <h2>Permissions</h2>
 <p>The app uses network access (for online play, friends and leaderboards, the optional cloud save, ads and store purchases), the
 store's billing service for purchases. It does not use the device's vibration.
 The Android version declares the advertising ID permission used by the ad partners, and on iPhone and iPad the game asks once
 for permission to track (App Tracking Transparency). It does not access the camera, microphone, contacts, device location or
-photo library.</p>
+photo library; the suggested flag comes from your device's region setting, not from your location.</p>
 
 <h2>Changes to this policy</h2>
 <p>When the app changes how it handles data, we update this page before that version is released; the date at the top shows
