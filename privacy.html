@@ -263,11 +263,12 @@ it was exchanged for.</p>
 <p>If you sign in on a device to an account that already exists, that device's guest profile is merged into your account.
 Its friends, friend requests, blocks, chats and mutes move to your account's profile. The rest of it (name, character,
 gender, flag, friend code, rating and results) is deleted from our server. The app shows you this before you confirm. Our server keeps the id of that merged guest profile for one year, as it
-does for every deleted profile, and nothing else of it (see <a href="#kept-id">Reinstalling, backups and your guest
+does for every deleted profile. Until you delete your account it also keeps a one-way code made from that id, so that your
+deletion can find that guest profile's record on our support service, and nothing else of it (see <a href="#kept-id">Reinstalling, backups and your guest
 identifier</a>).</p>
 <p>The merge does not touch that guest profile's record on our support service, so that a gift waiting there is not lost.
-That record keeps its own support code. It stays there until our team joins it to your account's record, or deletes it when
-you ask us to (see <a href="#what-stays">What a deletion removes, and what stays</a>).</p>
+That record keeps its own support code. It stays there until our team joins it to your account's record, until you delete your
+account, or until our team deletes it when you ask us to (see <a href="#what-stays">What a deletion removes, and what stays</a>).</p>
 <h3>Cloud save</h3>
 <p>While you are signed in, the app uploads a copy of your game progress to our server and loads it when you sign in on another device:</p>
 <ul>
@@ -382,10 +383,9 @@ game server or on our support service.</p>
   <li>Deleted data can stay in backups for a while: up to 5 days for our game server and up to about 30 days for our support
       service (see <a href="#retention">How long data is kept</a>). A deletion also does not reach a full copy of the support
       service's data that someone on our team downloaded before it.</li>
-  <li>A deletion clears only the record that belongs to your current guest identifier or account. A guest profile merged
-      into your account at a sign-in has its own record, unless our team has joined the two. To have it deleted, e-mail us,
-      with its support code if you still have it. The same goes for the record of an identifier you no longer use (for
-      example after Reset all data).</li>
+  <li>A deletion clears the record that belongs to your current guest identifier or account, and the record of every guest
+      profile merged into your account at a sign-in. It does not reach the record of an identifier you no longer use (for
+      example after Reset all data). To have that one deleted, e-mail us, with its support code if you still have it.</li>
   <li>Data held by the ad partners is not stored by us; see <a href="#choices">Your ad choices</a> for how to ask them.</li>
 </ul>
 
@@ -1000,14 +1000,15 @@ soon after, and always when it restarts.</p>
       hour.</li>
   <li><strong>Server logs:</strong> the game server's running log notes events such as:
       <ul>
-        <li>a new online profile (its player id and display name);</li>
-        <li>a room opening (with the name of the player who opened it);</li>
-        <li>a match starting and ending (with the players' display names, and whether the opponent was a computer
+        <li>a new online profile (with nothing about it);</li>
+        <li>a room opening (with its room code);</li>
+        <li>a match starting and ending (with the room code, the winning seat, and whether the opponent was a computer
             player);</li>
-        <li>ranked results (with both player ids), reports and moderation actions;</li>
+        <li>ranked results (with both player ids), reports (with both player ids and the name reported) and moderation
+            actions (with player ids, and a name hidden after reports);</li>
         <li>once an hour, the timing and sticker totals described above.</li>
       </ul>
-      It notes them with pseudonymous player ids and without IP addresses, and it has no typed messages, gender or flag. It
+      The player ids in it are pseudonymous. It has no IP addresses, typed messages, gender or flag. It
       is used only to keep the server working and to handle reports. Fly.io keeps it only as long as its log service keeps
       logs; we do not export or archive it.</li>
   <li><strong>Support e-mails and ad reports</strong>, with the e-mail address they come from: only as long as we need them
