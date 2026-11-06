@@ -425,7 +425,11 @@ pair you with another player. When few players are online, a Quick match may ins
       an hour after the match, so that either player can still report the other.</li>
   <li><strong>Your IP address:</strong> The server does not store your IP address beyond the open connection. To limit
       requests, it may count them per address in its memory, under a scrambled code made from the address with a key that
-      changes every time the server starts. This is never written to disk or to the logs. Fly.io, which runs our server,
+      changes every time the server starts. This is never written to disk or to the logs. When you look for a Quick or Ranked
+      match, your game sends your player id with the search. The server uses it only to tell whether you or the other player
+      has blocked the other, so that the two of you are not matched. A search without that id is checked by comparing its
+      address and name with the game's other open connections instead, in the server's memory and only for that moment.
+      Fly.io, which runs our server,
       sees your IP address as part of carrying the connection (see <a href="#third-parties">Who else handles data</a>).</li>
   <li><strong>Messages:</strong> In a match you can only send the built-in stickers and phrases. Chat with friends is described below.</li>
 </ul>
