@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1>Carrom Crew — Privacy Policy</h1>
-<p><em>Updated 21 November 2026 · applies to Carrom Crew 1.0.0 and later</em></p>
+<p><em>Updated 22 November 2026 · applies to Carrom Crew 1.0.0 and later</em></p>
 <p>This page describes the current version of the app, 1.4.0. Where older versions work differently, see
 <a href="#older-versions">Older versions of the app</a>.</p>
 <p>Also read our <a href="https://youtubeabdulla-max.github.io/carrom-crew-support/terms.html">Terms of Service</a> and
@@ -35,6 +35,8 @@
   <li>Players under 13 get no typed chat and no personalised ads.</li>
   <li>Sign in with Apple (iPhone and iPad) is optional. It keeps a copy of your progress on our server.</li>
   <li>Our team can find you by your support code and send you gifts, through a second server of ours.</li>
+  <li>If you are 13 or older, that server also gets your player name, so our team can find you.</li>
+  <li>If you write to us, our team may look up your record with an automated assistant (Claude, by Anthropic).</li>
   <li>You can delete your online data in the app at any time.</li>
   <li>Questions? E-mail <a href="mailto:youtubeabdulla@gmail.com">youtubeabdulla@gmail.com</a>.</li>
 </ul>
@@ -114,8 +116,8 @@ this policy, to ask what we hold about you, or to have it corrected or deleted.<
   <li>If you chat with your friends, our server keeps your messages for up to 30 days (see <a href="#chat">Chat with
       friends</a>). The medals you earn are shown with your online profile (see <a href="#medals">Medals</a>).</li>
   <li>Your game has a support code, so that our team can find you when you ask for help and send you gifts. A second server
-      of ours, our support service, keeps it. It holds a one-way code made from your guest identifier, never the identifier,
-      your name or your e-mail address (see <a href="#support-service">Your support code and gifts from our team</a>).</li>
+      of ours, our support service, keeps it. It holds a one-way code made from your guest identifier and, if you are 13 or older,
+      your player name, but never the identifier itself or your e-mail address (see <a href="#support-service">Your support code and gifts from our team</a>).</li>
   <li>You can delete your online data in the app at any time (see <a href="#deleting">Deleting your data</a>).</li>
 </ul>
 
@@ -376,6 +378,7 @@ game server or on our support service.</p>
       <ul>
         <li>the one-way codes of your guest identifier and, if you signed in, of your account id and e-mail address;</li>
         <li>your support code;</li>
+        <li>your player name, if it holds one;</li>
         <li>your platform and app version, the dates and how many times the game connected;</li>
         <li>the reason and order number on your gifts;</li>
         <li>the details on the activity trail.</li>
@@ -387,7 +390,9 @@ game server or on our support service.</p>
       the activity trail's event names and times.</li>
   <li>Deleted data can stay in backups for a while: up to 5 days for our game server and up to about 30 days for our support
       service (see <a href="#retention">How long data is kept</a>). A deletion also does not reach a full copy of the support
-      service's data that someone on our team downloaded before it.</li>
+      service's data that someone on our team downloaded before it, nor what the automated assistant our team may use was sent
+      before it: Anthropic deletes that within 30 days, or keeps it for up to 2 years if its automated safety systems flag the
+      conversation, or longer if the law requires it.</li>
   <li>A deletion clears the record that belongs to your current guest identifier or account, and the record of every guest
       profile merged into your account at a sign-in. It does not reach the record of an identifier you no longer use (for
       example after Reset all data). To have that one deleted, e-mail us, with its support code if you still have it.</li>
@@ -523,7 +528,7 @@ flag or gender icon. Your friends can see whether you are online or in a match.<
             other.</li>
       </ul>
       Otherwise the game answers that no player has that name, exactly as for a name nobody holds. So if you play a version
-      before 1.4, nobody can find you by your name, even while our server holds the name for you, until you update and tap
+      before 1.4, no other player can find you by your name, even while our server holds the name for you, until you update and tap
       I agree. Our own account, Carrom Crew Team, can always be found by that name, unless you have blocked it. It accepts a
       friend request at once, answers messages with one fixed line (the quick message "Thanks!" if you can't receive typed
       messages) and leaves your friends list after a day.</li>
@@ -668,7 +673,7 @@ kept</a>).</p>
 <p><strong>Settings</strong> shows your support code, which looks like <code>CC-XXXX-XXXX</code>. Copy it and send it to us when
 you ask for help; the e-mail that <strong>Settings &rarr; Contact support</strong> opens already carries it. With it our team
 can find your record and send you a gift: XP, Remove Ads or a note. A gift shows up in your Inbox as a fixed line of text,
-within about a minute while the game is open, or the next time you open it.</p>
+within about a minute while the game is open, or the next time you open it. A gift not collected within 365 days of being sent is cancelled.</p>
 <p>This runs on a second server of ours, our support service. It is separate from the game server, it runs at Fly.io in
 Singapore, and it is set up for our other games too. Every player whose game goes online gets a record there, whether or not
 they ever write to us.</p>
@@ -677,8 +682,12 @@ they ever write to us.</p>
       does not get your IP address.</li>
   <li><strong>What it is sent:</strong> a one-way code made from your guest identifier, your platform (iPhone or iPad, or
       Android) and your app version, and, when you sign in, the one-way codes described in
-      <a href="#sign-in">Optional Sign in with Apple and cloud save</a>. It is never sent your guest identifier, your player
-      id, your display name, your account id or your e-mail address.</li>
+      <a href="#sign-in">Optional Sign in with Apple and cloud save</a>.
+      If you are 13 or older, it is also sent your player name each time your game connects, so that our team can find
+      your record by it when you write to us; a new name replaces the old one at your next connection. Players under 13 never
+      have their name sent, and if a player tells the game they are under 13, the name is removed from the support service
+      as soon as their game next reaches our server. It is never sent your guest identifier, your player id, your account id or your e-mail
+      address.</li>
 </ul>
 <p>What the support service keeps:</p>
 <ul>
@@ -686,10 +695,11 @@ they ever write to us.</p>
       our game server uses;</li>
   <li>your support code, which is made from that code;</li>
   <li>your platform and app version, when it first and last heard of you, and how many times the game connected;</li>
+  <li>if you are 13 or older, your player name, as it was at your last connection;</li>
   <li>each gift: what it is, how much, whether it has been delivered, and when it was made and collected; if the game could
       not apply it, the short reason (such as the app version);</li>
   <li>with each gift, the reason our team wrote and, if there is one, an order number. Support may record an order number
-      with a gift, to look into a purchase problem. These stay with our team and are never sent to the game;</li>
+      with a gift, to look into a purchase problem. These are never sent to the game and stay with our team, apart from the automated assistant described below;</li>
   <li>an activity trail: one line for each event, such as registered, signed in or gift collected, with the time and a small
       detail;</li>
   <li>if you sign in with Apple: that you did, and one-way codes of your account id and e-mail address with a secret added.
@@ -697,8 +707,8 @@ they ever write to us.</p>
   <li>if two records report the same sign-in: a note of the two record numbers, the kind of sign-in and that account's code.
       Nothing moves by itself: our team looks at it.</li>
 </ul>
-<p>It does not keep your name, your e-mail address, your IP address, a device identifier, your location, a purchase receipt or
-any payment detail.</p>
+<p>It does not keep your e-mail address, your IP address, a device identifier, your location, a purchase receipt or
+any payment detail, and it keeps no name of a player under 13.</p>
 <ul>
   <li><strong>How a gift reaches you:</strong> about once a minute, our game server asks the support service which players
       have a gift waiting. It takes a gift only while that player's game is connected, and holds it in its memory while it is
@@ -707,9 +717,20 @@ any payment detail.</p>
   <li><strong>A gift of Remove Ads</strong> is kept in your save, and in your cloud save if you are signed in, not with your
       store account. So Restore purchases does not bring it back.</li>
   <li><strong>What our team sees:</strong> your record, and the gifts and trail with it. They can search by support code, by
-      an order number, or by the address you wrote from (it is turned into the same one-way code and compared). These
+      an order number, by player name, or by the address you wrote from (it is turned into the same one-way code and compared). These
       searches cover every game of ours that uses the service, so writing to us from an address can also show us your
       records in those games.</li>
+  <li><strong>An automated assistant:</strong> when you, or your parent, write to us, our team may use an automated assistant (Claude, made by
+      Anthropic PBC, a US company) to look up your record. It is sent our team's question, which can quote what you wrote to us (for example your Player ID or
+      player name), with every e-mail address in it removed first, and these parts of your record on our support service: your
+      support code, your player name if the record holds one, your platform and app version, the dates and the count of
+      connections, whether the record was deleted, which kinds of sign-in are linked and whether each can be found by an
+      e-mail address (never the account, the address or its one-way code), your gifts with their reasons and order numbers,
+      and the activity trail. Apart from what our team's question quotes, it is never sent your Player ID, and it is never
+      sent your e-mail address, the one-way codes, your IP address or anything else from our game server. When a parent writes to us about a child under 13, or a player tells us they are under 13, our team gives it only that record's support code, never what they wrote (see <a href="#children">Children</a>). It does not change your record or send gifts by itself. Anthropic deletes what it is sent within 30 days, unless its automated
+      safety systems flag the conversation, in which case it can keep it for up to 2 years (and its safety scores for up to 7
+      years), or the law requires it to keep it longer. By default, Anthropic does not use it to train its models (see
+      <a href="#third-parties">Who else handles data</a>).</li>
   <li><strong>Your code can change:</strong> it follows your guest identifier, so it changes with Reset all data, Delete
       online data, Delete account and when signing in or out changes the identifier. A signed-in account keeps one code on
       every device.</li>
@@ -792,8 +813,11 @@ ad</a>).</p>
         <li>daily totals with no player id about Quick matches, to tune computer players;</li>
         <li>a record of which version of the Terms you accepted and when, to show that you agreed, and so that only players who
             agreed in version 1.4 or later can be found by their name;</li>
-        <li>your support code, gifts from our team, any order number recorded with a gift and the activity trail on our
-            support service, to help you when you ask, to look into purchase problems and to give each gift only once;</li>
+        <li>your support code, your player name there if you are 13 or older, gifts from our team, any order number recorded
+            with a gift and the activity trail on our support service, which our team may look up with an automated assistant
+            when you, or your parent, write to us, to help you when you ask, to look into purchase problems and to give each gift only once;</li>
+        <li>the e-mails and ad reports you send us, to answer them, and the question our team may ask the automated assistant
+            about your record, which can quote what you wrote;</li>
         <li>non-personalised ads that keep the game free to play.</li>
       </ul></li>
   <li><strong>Legal obligations:</strong> answering data requests and keeping the records the law requires.</li>
@@ -822,6 +846,14 @@ ad</a>).</p>
       before it leaves our server, with a key only we hold, so Cloudflare can't read it. A deleted player's data can stay in
       those copies for about 30 days. <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare's privacy
       policy</a>.</li>
+  <li><strong>Anthropic PBC</strong>, a US company, which provides the automated assistant (Claude) our team may use when you,
+      or your parent, write to us. It receives only our team's question, which can quote what you wrote to us, with e-mail addresses removed, and the parts of your
+      record on our support service listed in <a href="#support-service">Your support code and gifts from our team</a>, never its one-way codes. Under Anthropic's Commercial
+      Terms of Service, which include its Data Processing Addendum, Anthropic acts as a processor for this data. It deletes it
+      within 30 days, or keeps it for up to 2 years if its automated safety systems flag the conversation, or longer if the
+      law requires it; by default it does not use it to train its models.
+      <a href="https://www.anthropic.com/legal/commercial-terms">Anthropic's Commercial Terms of Service</a>.
+      <a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>.</li>
   <li><strong>GitHub</strong>, which hosts this page, the Terms of Service, the Refund Policy and the support page on our
       support site. When you open them there, GitHub receives what any website receives, such as your IP address and
       browser; the pages contain no scripts or trackers of ours.
@@ -834,7 +866,7 @@ server of ours. Our game server talks to our support service, and sends it only 
 <a href="#support-service">Your support code and gifts from our team</a>. Apart from these companies, we give your data to no one, unless the law requires it or to report
 suspected child exploitation to the authorities, and we never sell it for money. Your phone's own backups are made by Apple
 or Google for you; we never receive them. Each of these companies handles data under its own privacy policy and terms
-(linked above). For the ads, Unity LevelPlay and each ad partner are also bound by them, their agreement with us and the App
+(linked above; for what Anthropic is sent, that is its Commercial Terms of Service, not its privacy policy). For the ads, Unity LevelPlay and each ad partner are also bound by them, their agreement with us and the App
 Store and Google Play rules to protect that data at least as well as this policy describes.
 <a href="https://fly.io/legal/terms-of-service/">Fly.io's terms of service</a> let Fly.io use the data it hosts as needed to
 provide and improve its services; what Fly.io does with that data is described in Fly.io's privacy policy (linked
@@ -1033,10 +1065,13 @@ soon after, and always when it restarts.</p>
       deleted.</li>
   <li><strong>Daily totals about the Quick queue and its matches against computer players</strong> (counts with no player
       id, name or match id): with no fixed end date, as totals that are not linked to anyone, to run and tune the game.</li>
-  <li><strong>Your record on our support service</strong> (the one-way codes, support code, platform, app version, dates, how
-      many times the game connected, gifts with their reasons and order numbers, and the details on the activity trail): until
+  <li><strong>Your record on our support service</strong> (the one-way codes, support code, your player name if you are 13 or
+      older, platform, app version, dates, how many times the game connected, gifts with their reasons and order numbers, and the details on the activity trail): until
       it is deleted as described in <a href="#what-stays">What a deletion removes, and what stays</a>. The support service does
       not delete records that are no longer used, and Reset all data or uninstalling the app does not delete it.</li>
+  <li><strong>What the automated assistant our team may use is sent</strong> (see <a href="#support-service">Your support code and
+      gifts from our team</a>): Anthropic deletes it within 30 days, unless its automated safety systems flag the
+      conversation (up to 2 years, and its safety scores up to 7 years) or the law requires it to keep it longer.</li>
   <li><strong>What stays of a deleted record on our support service</strong> (an empty record, each gift's item, amount, state
       and dates, and the activity trail's event names and times, with nothing that identifies you): it has no end date.</li>
   <li><strong>A message waiting to reach our support service</strong> (the one-way codes of a sign-in, or the one-way code of a
@@ -1064,7 +1099,7 @@ soon after, and always when it restarts.</p>
       is used only to keep the server working and to handle reports. Fly.io keeps it only as long as its log service keeps
       logs; we do not export or archive it.</li>
   <li><strong>Support e-mails and ad reports</strong>, with the e-mail address they come from: only as long as we need them
-      to deal with your message, and deleted within 12 months; you can ask us to delete yours sooner at any time.</li>
+      to deal with your message, and deleted within 12 months (once we have dealt with it, if we learn that the player who wrote is under 13); you can ask us to delete yours sooner at any time.</li>
   <li><strong>Data held by the ad partners</strong> and by Apple or Google: for the periods set out in their own privacy
       policies.</li>
 </ul>
@@ -1113,12 +1148,15 @@ data, we will tell you, and the authorities, where the law requires it.</p>
 stored and processed there, wherever you play from. Our support service runs there too. Encrypted copies of its backups are stored by Cloudflare, Inc., a
 US company, in storage that Cloudflare places in the Asia-Pacific region. That is Cloudflare's own placement, not a legal
 promise about where the copies stay, and we treat it as an international transfer. The ad partners (Unity and Google), Apple,
-Google and GitHub are based mainly in the United States
+Google, GitHub and Anthropic are based mainly in the United States
 and process data there and in other countries. Your data may therefore be processed in countries whose data-protection laws
 differ from those where you live.</p>
 <p>Where the law requires safeguards for such transfers (for example for data from the European Economic Area, the United
 Kingdom or Switzerland), the transfers to Unity, Google, Apple and GitHub rely on the safeguards those companies set out in
 their terms, such as the European Commission's standard contractual clauses.</p>
+<p>The transfers to Anthropic rely on the European Commission's standard contractual clauses, with the UK addendum and the
+Swiss changes to them, which Anthropic's Data Processing Addendum includes. You can ask us by e-mail for a copy of what the
+transfers named in this paragraph and the one before it rely on.</p>
 <p>This policy does not name such a safeguard for Fly.io or Cloudflare. What we can tell you about them:</p>
 <ul>
   <li><strong>Fly.io</strong>: it hosts both servers for us under its own terms of service, and we have not signed a separate
@@ -1157,14 +1195,16 @@ flag</a>).</p>
       as friends.</li>
 </ul>
 <p>So that they can play online and with friends, our server keeps only what the game needs for that, as described in this
-policy. That is their online profile (a player id, the display name they chose, character, optional flag, friend code,
+policy. That includes their online profile (a player id, the display name they chose, character, optional flag, friend code,
 rating, star totals, how many online matches they finished (Quick matches against computer players too), medals and age
 group, a one-way code made from their guest identifier, and which version of the Terms they accepted and when), their
-friends and blocks, and the quick messages and stickers they exchange with
-friends (up to 30 days). We use this only to run the game and keep it safe, never for advertising, and we never contact them outside the game. The only lines from our team are the fixed Inbox lines described below and, if they add our Carrom Crew Team account as a friend, its quick message "Thanks!" (see <a href="#friends">Friends and leaderboards</a>). Their online profile is kept until it is deleted: our server does not delete unused profiles by itself.</p>
+friends, friend requests and blocks, their ranked match results, reports made by or about them and any moderation action we
+took (see <a href="#reporting">Reporting and blocking</a>), and the quick messages and stickers they exchange with
+friends (up to 30 days). We use this only to run the game and keep it safe, never for advertising, and we never contact them outside the game. The only lines from our team are the fixed Inbox lines described below and, if they add our Carrom Crew Team account as a friend, its quick message "Thanks!" (see <a href="#friends">Friends and leaderboards</a>). Apart from these, our team writes to them only to answer an e-mail they sent us (see below). Their online profile is kept until it is deleted: our server does not delete unused profiles by itself.</p>
 <p>Like every player whose game goes online, they also get a support code and a record on our support service (see
-<a href="#support-service">Your support code and gifts from our team</a>). It holds no name and, apart from the one exception
-above, nothing made from an e-mail address. We use it only for support and gifts. A gift reaches them only as a fixed line in
+<a href="#support-service">Your support code and gifts from our team</a>). Their player name is never sent to it, and a
+name sent while the game had them as 13 or older is removed as soon as their game next reaches our server. Apart from the
+one exception above, the record holds nothing made from an e-mail address. We use it only for support and gifts. If a parent writes to us about a child under 13, or a player says in their message that they are under 13, our team may use the automated assistant described there to look up that record, by its support code only: our team never gives it what they wrote. Our support service does not know a player's age, so until a parent or the player tells us that the player is under 13, our team may give the assistant what they wrote, as for anyone else. A gift reaches them only as a fixed line in
 the game's Inbox. This record too is kept until it is deleted: the support service does not delete unused records by
 itself.</p>
 <ul>
@@ -1173,6 +1213,8 @@ itself.</p>
       identifier; see <a href="#kept-id">Reinstalling, backups
       and your guest identifier</a>), or by e-mailing us their Player ID (see <a href="#deleting">Deleting your data</a>).</li>
   <li>A parent can also ask us to show them the data we hold about their child.</li>
+  <li>If we learn that a player who writes to us is under 13, we use their e-mail address only to deal with that message, and
+      delete their e-mails once we have done so.</li>
   <li>After Delete online data, the game sends nothing more to our server until the player goes online on purpose.</li>
 </ul>
 <p>For everyone else we tell the ad partners that the game is not child-directed. If you believe we hold information about
@@ -1193,7 +1235,7 @@ and the store's billing service for purchases. It does not use the device's vibr
 <p>This page describes version 1.4.0. Older versions of Carrom Crew work differently in these ways:</p>
 <ul>
   <li><strong>Before version 1.4.0:</strong> you add friends by their friend code, shown on the Friends screen, instead of
-      by typing their name. Nobody can find you by your name, even while our server holds the name for you, until you update and tap
+      by typing their name. No other player can find you by your name, even while our server holds the name for you, until you update and tap
       I agree (see <a href="#friends">Friends and leaderboards</a>). On iPhone and iPad, Google's consent form for ads does
       not show. There is no Arabic. A short ad between matches follows only a match you finish or a trick shot you solve, at
       most one a minute, and never a forfeited match (see <a href="#advertising">Advertising</a>).</li>
@@ -1215,11 +1257,15 @@ and the store's billing service for purchases. It does not use the device's vibr
 </ul>
 
 <h2 id="changes">Changes to this policy</h2>
-<p>When the app changes how it handles data, we update this page before that version is released; the date at the top shows
-the latest change. When a change matters to you, we also tell you in the game: the next version shows its first screen
-again, says that our Terms have been updated, links to the Terms of Service, this policy and the Refund Policy, and asks you
-to tap I agree before you keep playing. Version 1.4.0 does this for the new rules about names: other players can find you
+<p>When the app or our servers change how they handle data, we update this page first: before that version of the app is
+released, or before the change on our servers takes effect. The date at the top shows the latest change. When a change in a
+new version of the app matters to you, that version also shows its first screen again, says that our Terms have been
+updated, links to the Terms of Service, this policy and the Refund Policy, and asks you to tap I agree before you keep
+playing. Version 1.4.0 does this for the new rules about names: other players can find you
 by your name only after you tap I agree there.
+The changes of 22 November 2026 (the automated assistant our team may use, and the player name of players 13 or older sent
+to our support service) came without a new version of the app, so the game does not ask you again; this page is how we tell
+you about them.
 If we ever want to use your data for something that needs your consent, we will ask you first, in the game.</p>
 
 <h2 id="contact">Contact</h2>
