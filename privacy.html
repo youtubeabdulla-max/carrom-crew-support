@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1>Carrom Crew — Privacy Policy</h1>
-<p><em>Updated 22 November 2026 · applies to Carrom Crew 1.0.0 and later</em></p>
+<p><em>Updated 23 November 2026 · applies to Carrom Crew 1.0.0 and later</em></p>
 <p>This page describes the current version of the app, 1.4.0. Where older versions work differently, see
 <a href="#older-versions">Older versions of the app</a>.</p>
 <p>Also read our <a href="https://youtubeabdulla-max.github.io/carrom-crew-support/terms.html">Terms of Service</a> and
@@ -33,6 +33,7 @@
   <li>When few players are online, a Quick match may be against a computer player.</li>
   <li>Chat is only between friends. Our server keeps messages for up to 30 days.</li>
   <li>Players under 13 get no typed chat and no personalised ads.</li>
+  <li>Our server deletes the online data of players under 13 after 12 months offline.</li>
   <li>Sign in with Apple (iPhone and iPad) is optional. It keeps a copy of your progress on our server.</li>
   <li>Our team can find you by your support code and send you gifts, through a second server of ours.</li>
   <li>If you are 13 or older, that server also gets your player name, so our team can find you.</li>
@@ -222,7 +223,8 @@ sends the name, character, gender, flag and medals kept in that save. What happe
   <li><strong>Within one year of a deletion</strong> (with Delete online data, Delete account, when a device's guest profile is merged into
       your account as you sign in on it, or by us at your request): our server recognises the
       identifier. It stores nothing of what was sent and tells the game, which takes a new guest identifier and stays
-      offline, as right after the deletion. Your deleted data and Player ID do not come back.</li>
+      offline, as right after the deletion. Your deleted data and Player ID do not come back. The same holds for a player under
+      13 whose profile our server deleted 12 months after their game last went online (see <a href="#children">Children</a>).</li>
   <li><strong>More than a year after the deletion:</strong> the old identifier starts a new online profile. It gets a new
       Player ID and the name, character, gender, flag, medals and trick-shot stars kept in that save. On our support service
       it gets a new, empty record with the same support code as before. Use Delete online data to remove both.</li>
@@ -245,7 +247,8 @@ never your name.</p>
       key;</li>
   <li>the token Apple gives our server for your sign-in (Apple calls it a "refresh token"). We use it only to ask Apple to
       revoke Carrom Crew's Sign in with Apple access: when you delete your account, or when a new account is not created
-      (see below);</li>
+      (see below). For a player under 13, our server also asks Apple this when it deletes their account after 12 months
+      without going online (see <a href="#children">Children</a>);</li>
   <li>when your account was created and when its cloud save was last updated. The app shows both in <strong>Settings
       &rarr; Account &amp; name</strong>.</li>
 </ul>
@@ -269,12 +272,15 @@ it was exchanged for.</p>
 <p>If you sign in on a device to an account that already exists, that device's guest profile is merged into your account.
 Its friends, friend requests, blocks, chats and mutes move to your account's profile. The rest of it (name, character,
 gender, flag, friend code, rating and results) is deleted from our server. The app shows you this before you confirm. Our server keeps the id of that merged guest profile for one year, as it
-does for every deleted profile. Until you delete your account it also keeps a one-way code made from that id, so that your
+does for every deleted profile. Until you delete your account it also keeps a one-way code made from that id, so that the
 deletion can find that guest profile's record on our support service, and nothing else of it (see <a href="#kept-id">Reinstalling, backups and your guest
-identifier</a>).</p>
+identifier</a>). For a player under 13, that code also goes when our server deletes the account with its online profile,
+12 months after a game last went online signed in to it (see <a href="#children">Children</a>).</p>
 <p>The merge does not touch that guest profile's record on our support service, so that a gift waiting there is not lost.
 That record keeps its own support code. It stays there until our team joins it to your account's record, until you delete your
-account, or until our team deletes it when you ask us to (see <a href="#what-stays">What a deletion removes, and what stays</a>).</p>
+account, or until our team deletes it when you ask us to (see <a href="#what-stays">What a deletion removes, and what stays</a>).
+For a player under 13, it also goes when our server deletes the account with its online profile, 12 months after a game
+last went online signed in to it (see <a href="#children">Children</a>).</p>
 <h3>Cloud save</h3>
 <p>While you are signed in, the app uploads a copy of your game progress to our server and loads it when you sign in on another device:</p>
 <ul>
@@ -357,7 +363,10 @@ game server or on our support service.</p>
   <li>Your online profile and your record on our support service stay, and so do your account and cloud save if you are
       signed in.</li>
   <li>After Reset all data, or a reinstall that does not bring back your guest identifier, the app can no longer reach that
-      online profile or that record. Neither server deletes unused profiles or records by itself. We can delete them on
+      online profile or that record. Neither server deletes unused profiles or records by itself. The one exception is an
+      online profile with the age group under 13: 12 months after the game last went online with it, our game server
+      deletes it and has that record cleared (see <a href="#children">Children</a>). Its account and cloud save, if it has
+      them, go with it. We can delete them on
       request only if we can confirm they were yours. So use Delete online data or Delete account first.</li>
   <li>Reset all data also replaces the kept copy of the guest identifier. Uninstalling leaves that copy. On Android, if backup
       is on, Android's backup also keeps the save and gives it back on a reinstall, until Reset all data has run and
@@ -365,6 +374,8 @@ game server or on our support service.</p>
 </ul>
 <h3 id="what-stays">What a deletion removes, and what stays</h3>
 <ul>
+  <li>All of this applies in the same way when our server deletes the online profile of a player under 13, 12 months after
+      their game last went online (see <a href="#children">Children</a>).</li>
   <li>Deleting your online data or your account removes your chat messages from your friends' screens at once. We keep a
       hidden copy for 14 days so that abuse can still be reported, then delete it.</li>
   <li>It also deletes which messages you have read, the counts of your refused messages and of friends who never wrote
@@ -395,7 +406,9 @@ game server or on our support service.</p>
       conversation, or longer if the law requires it.</li>
   <li>A deletion clears the record that belongs to your current guest identifier or account, and the record of every guest
       profile merged into your account at a sign-in. It does not reach the record of an identifier you no longer use (for
-      example after Reset all data). To have that one deleted, e-mail us, with its support code if you still have it.</li>
+      example after Reset all data). To have that one deleted, e-mail us, with its support code if you still have it. If that
+      identifier's online profile has the age group under 13, our server also deletes that profile by itself 12 months after
+      it last went online, and has that record cleared (see <a href="#children">Children</a>).</li>
   <li>Data held by the ad partners is not stored by us; see <a href="#choices">Your ad choices</a> for how to ask them.</li>
 </ul>
 
@@ -951,7 +964,8 @@ Google Play billing.</p>
       signed-in account.</li>
   <li>Support may record an order number with a gift, to look into a purchase problem. You give us that number when you
       write to us. It is kept with that gift on our support service, is never sent to the game, and goes when you delete
-      your data (see <a href="#support-service">Your support code and gifts from our team</a>).</li>
+      your data (see <a href="#support-service">Your support code and gifts from our team</a>). For a player under 13, it
+      also goes when our server deletes their online profile, 12 months after their game last went online.</li>
   <li>Refunds are handled by Apple and Google; see our <a href="https://youtubeabdulla-max.github.io/carrom-crew-support/refund.html">Refund
       Policy</a>.</li>
   <li>The game does not tell the ad partners what you bought, but the Unity Ads software may record your in-app purchases
@@ -1019,7 +1033,8 @@ soon after, and always when it restarts.</p>
       number of online matches you finished (Quick matches against computer players too), any hidden name, chat pause, hold
       or ban, friends, blocks and ranked match results): for as long as the profile exists, until it is deleted as described
       in <a href="#deleting">Deleting your data</a>. Our server does not delete profiles that are no longer used (only the
-      hold on the name ends, see below), and Reset
+      hold on the name ends, see below). The exception is the profile of a player under 13: our server deletes it 12 months
+      after their game last went online (see <a href="#children">Children</a>). Reset
       all data or uninstalling the app does not delete it.</li>
   <li><strong>The hold on your name</strong> (the key that keeps other profiles from taking it): as long as the profile exists, but it ends after a
       year without going online, or after 30 days for a profile that never finished an online match and has no friends. Then
@@ -1027,7 +1042,9 @@ soon after, and always when it restarts.</p>
       rule, a finished Quick match against a computer player counts as a finished online match, so the hold ends only after a year
       without going online.</li>
   <li><strong>Sign in with Apple link, e-mail address, Apple refresh token and cloud save:</strong> until you use Delete
-      account. If Apple can't complete the revocation right away, the refresh token and a scrambled code made from your Apple
+      account. For a player under 13 who was already signed in, they also go when our server deletes the account with its
+      online profile, 12 months after a game last went online signed in to it. Our server then also asks Apple to revoke
+      Carrom Crew's Sign in with Apple access, as Delete account does. If Apple can't complete the revocation right away, the refresh token and a scrambled code made from your Apple
       user id are kept only to ask Apple again (and to cancel that retry if you sign in with the same Apple ID again), for up
       to 7 days.</li>
   <li><strong>A sign-in waiting for your confirmation:</strong> only in the server's memory, for up to 10 minutes. If it is
@@ -1068,7 +1085,9 @@ soon after, and always when it restarts.</p>
   <li><strong>Your record on our support service</strong> (the one-way codes, support code, your player name if you are 13 or
       older, platform, app version, dates, how many times the game connected, gifts with their reasons and order numbers, and the details on the activity trail): until
       it is deleted as described in <a href="#what-stays">What a deletion removes, and what stays</a>. The support service does
-      not delete records that are no longer used, and Reset all data or uninstalling the app does not delete it.</li>
+      not delete records that are no longer used, and Reset all data or uninstalling the app does not delete it. For a player
+      under 13, our game server has it cleared when it deletes their online profile, 12 months after their game last went
+      online.</li>
   <li><strong>What the automated assistant our team may use is sent</strong> (see <a href="#support-service">Your support code and
       gifts from our team</a>): Anthropic deletes it within 30 days, unless its automated safety systems flag the
       conversation (up to 2 years, and its safety scores up to 7 years) or the law requires it to keep it longer.</li>
@@ -1077,7 +1096,8 @@ soon after, and always when it restarts.</p>
   <li><strong>A message waiting to reach our support service</strong> (the one-way codes of a sign-in, or the one-way code of a
       deletion): in a queue on our game server, until the support service has answered.</li>
   <li><strong>The one-way code of a guest profile merged into your account:</strong> on our game server, until you delete your
-      account.</li>
+      account. For a player under 13, it also goes when our server deletes the account with its online profile, 12 months
+      after a game last went online signed in to it.</li>
   <li><strong>A gift on its way to your game:</strong> only in our game server's memory, while your game is connected.</li>
   <li><strong>Backups of our game server:</strong> deleted data can remain in its encrypted backups for up to 5 days.</li>
   <li><strong>Backups of our support service:</strong> deleted data can remain in them for up to about 30 days: for up to about
@@ -1190,7 +1210,8 @@ flag</a>).</p>
   <li>Sign in with Apple is not offered to them, so we receive no e-mail address and keep no cloud save for them. The one
       exception: a player who was already signed in with Apple before telling the game they are under 13 keeps that account,
       with its e-mail address and cloud save (Sign out and Delete account stay available); a parent can also ask us to delete
-      it.</li>
+      it. Our server deletes it with its online profile 12 months after a game last went online signed in to it (see
+      below).</li>
   <li>Computer players they may meet in Quick matches send only the built-in stickers; they never chat and cannot be added
       as friends.</li>
 </ul>
@@ -1200,18 +1221,28 @@ rating, star totals, how many online matches they finished (Quick matches agains
 group, a one-way code made from their guest identifier, and which version of the Terms they accepted and when), their
 friends, friend requests and blocks, their ranked match results, reports made by or about them and any moderation action we
 took (see <a href="#reporting">Reporting and blocking</a>), and the quick messages and stickers they exchange with
-friends (up to 30 days). We use this only to run the game and keep it safe, never for advertising, and we never contact them outside the game. The only lines from our team are the fixed Inbox lines described below and, if they add our Carrom Crew Team account as a friend, its quick message "Thanks!" (see <a href="#friends">Friends and leaderboards</a>). Apart from these, our team writes to them only to answer an e-mail they sent us (see below). Their online profile is kept until it is deleted: our server does not delete unused profiles by itself.</p>
+friends (up to 30 days). We use this only to run the game and keep it safe, never for advertising, and we never contact them outside the game. The only lines from our team are the fixed Inbox lines described below and, if they add our Carrom Crew Team account as a friend, its quick message "Thanks!" (see <a href="#friends">Friends and leaderboards</a>). Apart from these, our team writes to them only to answer an e-mail they sent us (see below). Their online profile is kept until it is deleted: our server deletes it by itself once their game has not gone online for 12 months (see below).</p>
 <p>Like every player whose game goes online, they also get a support code and a record on our support service (see
 <a href="#support-service">Your support code and gifts from our team</a>). Their player name is never sent to it, and a
 name sent while the game had them as 13 or older is removed as soon as their game next reaches our server. Apart from the
 one exception above, the record holds nothing made from an e-mail address. We use it only for support and gifts. If a parent writes to us about a child under 13, or a player says in their message that they are under 13, our team may use the automated assistant described there to look up that record, by its support code only: our team never gives it what they wrote. Our support service does not know a player's age, so until a parent or the player tells us that the player is under 13, our team may give the assistant what they wrote, as for anyone else. A gift reaches them only as a fixed line in
-the game's Inbox. This record too is kept until it is deleted: the support service does not delete unused records by
-itself.</p>
+the game's Inbox. This record too is kept until it is deleted: our server has it cleared when it deletes their online
+profile (see below).</p>
 <ul>
   <li>A parent or the player can delete it at any time with <strong>Settings &rarr; Privacy &amp; data &rarr; Delete online
       data</strong> (which also clears their record on our support service and replaces the kept copy of their guest
       identifier; see <a href="#kept-id">Reinstalling, backups
       and your guest identifier</a>), or by e-mailing us their Player ID (see <a href="#deleting">Deleting your data</a>).</li>
+  <li>If their game has not gone online for 12 months, our server deletes their online profile by itself. It deletes the same
+      data as Delete online data and has their record on our support service cleared (see <a href="#what-stays">What a
+      deletion removes, and what stays</a>). For a player who was already signed in with Apple, it also deletes the account,
+      its e-mail address and cloud save, as Delete account does, and asks Apple to revoke Carrom Crew's Sign in with Apple
+      access. An account they signed out of goes 12 months after a game last went online signed in to it. Their progress
+      stays on the device. What they bought stays with the App Store or Google Play account and comes
+      back with <strong>Settings &rarr; Restore purchases</strong>. A Remove Ads gift from our team stays only in the save on
+      the device. When they come back, their game starts a new profile with a new Player ID. Within a year of the deletion it
+      first takes a new guest identifier and stays offline until they open Friends or Leaderboards or play online (see
+      <a href="#kept-id">Reinstalling, backups and your guest identifier</a>).</li>
   <li>A parent can also ask us to show them the data we hold about their child.</li>
   <li>If we learn that a player who writes to us is under 13, we use their e-mail address only to deal with that message, and
       delete their e-mails once we have done so.</li>
@@ -1246,7 +1277,8 @@ and the store's billing service for purchases. It does not use the device's vibr
       no support code and no gifts from our team, and our server does not register these versions with our support
       service. A player under 13 still shows the name they chose and their flag in online matches.</li>
   <li><strong>Version 1.1.0 and earlier:</strong> there is no friend chat, no age question, no medals and no gender or
-      flag.</li>
+      flag. A profile only ever used by these versions has no age group on our server, so the deletion after 12 months
+      without going online, for players under 13, does not apply to it.</li>
   <li><strong>Sign-in, in older versions:</strong> the sign-in creates or opens the account in one step, without the check
       described in <a href="#sign-in">Before an account is created</a>. Older versions do not show when your account was
       created or last saved. Signing out does not send a last copy of your progress first.</li>
@@ -1266,6 +1298,9 @@ by your name only after you tap I agree there.
 The changes of 22 November 2026 (the automated assistant our team may use, and the player name of players 13 or older sent
 to our support service) came without a new version of the app, so the game does not ask you again; this page is how we tell
 you about them.
+The change of 23 November 2026 also came without a new version of the app. With it, our server deletes the online profile of a player
+under 13, and has their record on our support service cleared, 12 months after their game last went online. This page is how
+we tell you about it.
 If we ever want to use your data for something that needs your consent, we will ask you first, in the game.</p>
 
 <h2 id="contact">Contact</h2>
