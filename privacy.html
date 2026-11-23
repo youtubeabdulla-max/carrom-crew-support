@@ -276,7 +276,11 @@ does for every deleted profile. Until you delete your account it also keeps a on
 deletion can find that guest profile's record on our support service, and nothing else of it (see <a href="#kept-id">Reinstalling, backups and your guest
 identifier</a>). For a player under 13, that code also goes when our server deletes the account with its online profile,
 12 months after a game last went online signed in to it (see <a href="#children">Children</a>).</p>
-<p>The merge does not touch that guest profile's record on our support service, so that a gift waiting there is not lost.
+<p>Our server also uses that one-way code to have the player name removed from that guest profile's record on our support
+service if you say you are under 13, or after a restore of the support service's database.</p>
+<p>The merge removes only the player name from that guest profile's record on our support service: that guest profile never
+connects again, so its name would otherwise stay there. The record itself stays, with any gift waiting there, so that the
+gift is not lost.
 That record keeps its own support code. It stays there until our team joins it to your account's record, until you delete your
 account, or until our team deletes it when you ask us to (see <a href="#what-stays">What a deletion removes, and what stays</a>).
 For a player under 13, it also goes when our server deletes the account with its online profile, 12 months after a game
@@ -394,8 +398,17 @@ game server or on our support service.</p>
         <li>the reason and order number on your gifts;</li>
         <li>the details on the activity trail.</li>
       </ul></li>
-  <li>Our game server tells the support service straight after the deletion. If the support service can't be reached, our
-      game server keeps the one-way code of your guest identifier in a queue and keeps trying until it answers.</li>
+  <li>Our game server tells the support service straight after the deletion, or usually up to about a minute later: while a
+      message telling the support service that your game connected or that you signed in, or taking a gift waiting for you,
+      is still unanswered, and in the first minute after some updates of our game server, it waits, so that the deletion
+      reaches the support service after any such message. It can take longer, for example while the support service is slow
+      to answer or asks our game server to wait, or when many deletions are due at once. If the support service can't be
+      reached or does not take the deletion yet, our game server keeps the one-way code of your guest identifier in a queue
+      and keeps trying until it does. It stops only if the support service refuses the message itself as malformed, which
+      only a fault of ours could cause. Our game server then writes that in its log, with nothing that identifies you, and
+      your record stays on the support service as it was. The game can't tell you when this happens. If you want to be sure
+      your record is gone, e-mail us, with your support code if you still have it: our team checks, and deletes it if it is
+      still there.</li>
   <li>What stays on our support service holds nothing that identifies you, and has no end date: an empty record (an internal
       number, the game and the time of the deletion), each gift's item, amount, state and dates, without who or why, and
       the activity trail's event names and times.</li>
@@ -1093,8 +1106,13 @@ soon after, and always when it restarts.</p>
       conversation (up to 2 years, and its safety scores up to 7 years) or the law requires it to keep it longer.</li>
   <li><strong>What stays of a deleted record on our support service</strong> (an empty record, each gift's item, amount, state
       and dates, and the activity trail's event names and times, with nothing that identifies you): it has no end date.</li>
-  <li><strong>A message waiting to reach our support service</strong> (the one-way codes of a sign-in, or the one-way code of a
-      deletion): in a queue on our game server, until the support service has answered.</li>
+  <li><strong>A message waiting to reach our support service</strong> (the one-way codes of a sign-in, the one-way code of a
+      deletion, or the one-way code of a record whose player name is to be removed): in a queue on our game server, until the
+      support service has answered. Our game server also notes the one-way code of a player each time it tells the support
+      service that their game connected or that they signed in, until the support service has answered, or for about a
+      minute if it did not (longer only while
+      our game server does not talk to the support service, for example after it is set back to an earlier version), so
+      that a deletion never reaches the support service before that message.</li>
   <li><strong>The one-way code of a guest profile merged into your account:</strong> on our game server, until you delete your
       account. For a player under 13, it also goes when our server deletes the account with its online profile, 12 months
       after a game last went online signed in to it.</li>
@@ -1302,6 +1320,12 @@ The change of 23 November 2026 also came without a new version of the app. With 
 under 13, and has their record on our support service cleared, 12 months after their game last went online. This page is how
 we tell you about it.
 If we ever want to use your data for something that needs your consent, we will ask you first, in the game.</p>
+<p>A second change of 23 November 2026 also came without a new version of the app. With it, our server has the player name removed from a
+record on our support service that should no longer hold one: the record of a guest profile merged into an account, the
+records of a player who says they are under 13, and, after a restore of the support service's database, every such record
+again. Our server also notes the one-way code of a player each time it tells the support service that their game connected
+or that they signed in, until that message is answered or for about a minute after it went unanswered, so that a deletion
+can wait for it (usually up to about a minute). This page is how we tell you about it.</p>
 
 <h2 id="contact">Contact</h2>
 <p>Abdulla Alhashmi &mdash; questions about this policy, requests about your data,
