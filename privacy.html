@@ -16,7 +16,7 @@
 </head>
 <body>
 <h1>Carrom Crew — Privacy Policy</h1>
-<p><em>Updated 23 November 2026 · applies to Carrom Crew 1.0.0 and later</em></p>
+<p><em>Updated 27 November 2026 · applies to Carrom Crew 1.0.0 and later</em></p>
 <p>This page describes the current version of the app, 1.4.0. Where older versions work differently, see
 <a href="#older-versions">Older versions of the app</a>.</p>
 <p>Also read our <a href="https://youtubeabdulla-max.github.io/carrom-crew-support/terms.html">Terms of Service</a> and
@@ -274,8 +274,10 @@ Its friends, friend requests, blocks, chats and mutes move to your account's pro
 gender, flag, friend code, rating and results) is deleted from our server. The app shows you this before you confirm. Our server keeps the id of that merged guest profile for one year, as it
 does for every deleted profile. Until you delete your account it also keeps a one-way code made from that id, so that the
 deletion can find that guest profile's record on our support service, and nothing else of it (see <a href="#kept-id">Reinstalling, backups and your guest
-identifier</a>). For a player under 13, that code also goes when our server deletes the account with its online profile,
-12 months after a game last went online signed in to it (see <a href="#children">Children</a>).</p>
+identifier</a>). After the deletion it keeps that code until 45 days after the support service took the deletion (see
+<a href="#what-stays">What a deletion removes, and what stays</a>). For a player under 13, the deletion that starts this is
+the one our server makes of the account with its online profile, 12 months after a game last went online signed in to it
+(see <a href="#children">Children</a>).</p>
 <p>Our server also uses that one-way code to have the player name removed from that guest profile's record on our support
 service if you say you are under 13, or after a restore of the support service's database.</p>
 <p>The merge removes only the player name from that guest profile's record on our support service: that guest profile never
@@ -417,6 +419,10 @@ game server or on our support service.</p>
       service's data that someone on our team downloaded before it, nor what the automated assistant our team may use was sent
       before it: Anthropic deletes that within 30 days, or keeps it for up to 2 years if its automated safety systems flag the
       conversation, or longer if the law requires it.</li>
+  <li>After a deletion, our game server keeps the one-way code of each record it had deleted on our support service, with the
+      time of the deletion and the time the support service took it, until 45 days after the support service last took that
+      deletion. It is not your player id and holds none of your other data, and our game server uses it only to delete that
+      record again if a backup of the support service made before then is ever restored, even if you have come back since.</li>
   <li>A deletion clears the record that belongs to your current guest identifier or account, and the record of every guest
       profile merged into your account at a sign-in. It does not reach the record of an identifier you no longer use (for
       example after Reset all data). To have that one deleted, e-mail us, with its support code if you still have it. If that
@@ -1093,6 +1099,11 @@ soon after, and always when it restarts.</p>
   <li><strong>The id of a deleted online profile</strong> (its player id, with the date, nothing else): one year after the
       deletion, so that an old backup can't bring the profile back; older ids are removed the next time a profile is
       deleted.</li>
+  <li><strong>The one-way code of a record deleted on our support service</strong> (the code alone, with the time of the
+      deletion and the time the support service took it): on our game server, until 45 days after the support service last
+      took that deletion, and while the deletion is still on its way, only to delete that record again if an older backup of
+      the support service is restored. It is kept for that time even if you come back. While our game server is set back to
+      an earlier version, nothing removes these codes: they go when it is updated again.</li>
   <li><strong>Daily totals about the Quick queue and its matches against computer players</strong> (counts with no player
       id, name or match id): with no fixed end date, as totals that are not linked to anyone, to run and tune the game.</li>
   <li><strong>Your record on our support service</strong> (the one-way codes, support code, your player name if you are 13 or
@@ -1114,8 +1125,9 @@ soon after, and always when it restarts.</p>
       our game server does not talk to the support service, for example after it is set back to an earlier version), so
       that a deletion never reaches the support service before that message.</li>
   <li><strong>The one-way code of a guest profile merged into your account:</strong> on our game server, until you delete your
-      account. For a player under 13, it also goes when our server deletes the account with its online profile, 12 months
-      after a game last went online signed in to it.</li>
+      account, and then as the one-way code of a record deleted on our support service (above). For a player under 13, the
+      deletion is the one our server makes of the account with its online profile, 12 months after a game last went online
+      signed in to it.</li>
   <li><strong>A gift on its way to your game:</strong> only in our game server's memory, while your game is connected.</li>
   <li><strong>Backups of our game server:</strong> deleted data can remain in its encrypted backups for up to 5 days.</li>
   <li><strong>Backups of our support service:</strong> deleted data can remain in them for up to about 30 days: for up to about
@@ -1326,6 +1338,9 @@ records of a player who says they are under 13, and, after a restore of the supp
 again. Our server also notes the one-way code of a player each time it tells the support service that their game connected
 or that they signed in, until that message is answered or for about a minute after it went unanswered, so that a deletion
 can wait for it (usually up to about a minute). This page is how we tell you about it.</p>
+<p>A change of 27 November 2026 also came without a new version of the app. With it, our server keeps the one-way code of each record it
+had deleted on our support service until 45 days after the support service took the deletion, so that it can delete that
+record again if a backup made before then is ever restored. This page is how we tell you about it.</p>
 
 <h2 id="contact">Contact</h2>
 <p>Abdulla Alhashmi &mdash; questions about this policy, requests about your data,
